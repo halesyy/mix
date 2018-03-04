@@ -8,7 +8,7 @@
     <?=$header?>
     <div id="particle-canvas">
         <div id="content">
-            <h1>CryptoBlender</h1>
+            <h1>CryptoBlender - <?php echo var_dump(extension_loaded('bcmath')); ?></h1>
             <div style="width: 100%;">
               <div style="float: left; width: 50%; text-align: right;">
                 <div id="info">
