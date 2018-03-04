@@ -23,7 +23,9 @@
   | 3. Router
   | 4. Sunrise Rendering Engine
   */
+    require_once('../vendor/autoload.php');
 
+    require_once "../application/modules/_HD.php";
     require_once "../application/modules/_App.php";
     require_once "../application/modules/_SP_Manipulation.php";
     require_once "../application/modules/MoneyBags.php";

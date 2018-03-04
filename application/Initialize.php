@@ -10,6 +10,7 @@
   | 5. Load router to serve files.
   */
 
+  require_once('vendor/autoload.php');
   $modules = glob('application/modules/*.php');
 
   $loaders = [
@@ -20,6 +21,7 @@
       return preg_match('/^[a-zA-Z]*.php$/m', basename($fileName));
     })
   ];
+
 
   // Loading from the $loaders array.
   foreach ($loaders['first'] as $fileName) // .. First-loads.
