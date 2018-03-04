@@ -1,16 +1,17 @@
 <nav id="header">
 
-    <div class="l" onclick="window.location.href='/';">Logo</div>
+    <div class="l" onclick="window.location.href='/';" style="font-size: 32px;">Logo</div>
 
-    <div class="l"><a href="/fees" class="t">Fees</a></div>
-    <div class="l"><a href="/faq" class="t">FAQ</a></div>
-    <div class="l"><a href="#contact" class="t contact">Contact</a></div>
+    <div class="l r"><a href="/fees" class="t">Fees</a></div>
+    <div class="l r"><a href="/faq" class="t">FAQ</a></div>
+    <div class="l r"><a href="#contact" class="t contact">Contact</a></div>
 
-    <div class="l r has-b"><a href="/mix" class="b <?=(Router::first()=='mix')?"on":""?>"><?=(Router::first()=='mix')?"Blending":"Blend"?></a></div>
-
-    <div class="l r has-b" style="padding-right: 10px;"><a href="#lol"
+    <div class="l has-b"><a href="#lol"
       style="background-image: url('http://www.nmafbs.org/wp-content/uploads/2018/01/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com_.png'); background-size: cover; background-position: center;"
       class="b"></a></div>
+
+      <div class="l r has-b" style="padding-right: 0;"><a href="/mix" class="b <?=(Router::first()=='mix')?"on":""?>"><?=(Router::first()=='mix')?"Blending":"Blend"?></a></div>
+
 
 </nav>
 
