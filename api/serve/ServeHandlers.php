@@ -5,7 +5,7 @@
     = [
         'test-generate-address' => function($Sunrise, $api) {
 
-            echo $api->bitcoin_address(1);
+            echo $api->address(1);
 
         }
 
