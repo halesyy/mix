@@ -1,42 +1,20 @@
 <?php
   class APIPERSONAL {
 
-      public $conversion_s = ['students' => 'students', 'parent-guardians' => 'parents'];
-      public $conversion_f = ['students' => 'Students_Form', 'parent-guardians' => 'Parent_Guardians_Form'];
+      private $xpub = 'xpub661MyMwAqRbcEniBw8iBd6GmustuAvZ27pgTG5Yq34Mm3yamiHRohWAVt9arg7v3BUvDwUFehWYedemmq7adhukwTXYHT158kSrCCqnjmd3';
 
-      public function create_new_object(Sunrise $Sunrise, $type) {
-        $ID   = hash('gost', rand(0, 1000000));
-        $Form = $Sunrise->Mini("Page_Pieces/{$this->conversion_f[$type]}", '..', [
-          'id' => $ID,
-          'first' => false
-        ]);
-        array_push($_SESSION[ $this->conversion_s[$type] ], [
-          'id'   => $ID,
-          'data' => []
-        ]);
-        return [
-          'id'   => $ID,
-          'form' => $Form
-        ];
+      public function bitcoin_address($id) {
+        $path = "0/{$id}";
+        // 1/x = change addresses, 0/x = recieving addresses
+        
+        $hd = new HD;
+        $hd->set_xpub($this->xpub);
+
+        $address = $hd->address_from_xpub($path);
+        return $address;
       }
 
 
-      public function &find_object($id, $nofind_die, $type) {
-        foreach ($_SESSION[ $this->conversion_s[$type] ] as $index => &$Object) {
-          if ($id == $Object['id']) {
-            return $Object;
-          }
-        }
-        if ($nofind_die) die('Couldn\'t find ID, ending self.');
-      }
 
-      public function find_object_id($id, $type) {
-        foreach ($_SESSION[ $this->conversion_s[$type] ] as $index => $Object) {
-          if ($id == $Object['id']) {
-            return $index;
-          }
-        }
-        return false;
-      }
 
   }

@@ -138,16 +138,6 @@
       }
 
 
-      /*
-      | @param String:FirstName, String:MiddleName, String:LastName
-      | Turns basic name data into names that can be represented as
-      | reference names.
-      */
-      public function CreateFullName($fname, $mname, $lname) {
-        if (!isset($mname) || empty($mname)) return "$fname $lname";
-        else return "$fname {$mname[0]}. $lname";
-      }
-
 
       /*
       | Reports an API issue in JSON format.

@@ -34,8 +34,8 @@
       }
 
       $key = HierarchicalKeyFactory::fromExtended($this->xpub, $this->network);
-
       $child_key = $key->derivePath($path);
+
       $pub_key = $child_key->getPublicKey();
 
       return $pub_key->getAddress()->getAddress();
