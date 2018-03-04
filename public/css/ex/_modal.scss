@@ -1,0 +1,54 @@
+.controls {
+  padding: 24px;
+}
+
+.cmodal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  // background: rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cmodal-dialog {
+  z-index: 101;
+  width: 70vmin;
+  height: 70vmin;
+  position: relative;
+  overflow: hidden;
+}
+
+.cmodal-svg {
+
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cmodal-polygon {
+  fill: #ab47bc;
+}
+
+.cmodal-content {
+
+  z-index: 101;
+  position: relative;
+  color: black;
+  top: 0;
+  left: 0;
+  padding: 24px;
+  visibility: hidden;
+  opacity: 0;
+  // color: rgba(255,255,255,0.87);
+}

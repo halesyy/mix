@@ -1,0 +1,65 @@
+$color: #333;
+
+#particle-canvas
+  {
+    padding: 0;
+    margin:  0;
+
+    width: 100%;
+    height: calc(100vh - #{$h_height});
+
+    #content
+      {
+        width: 100%;
+        // margin-left: 25%;
+
+        height: 40vh;
+        margin-top: calc(23vh);
+
+        // background: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        z-index: 100 !important;
+
+        // border-radius: 30px;
+        // box-shadow: rgba(0,0,0,0.14) 0px 2px 2px 0px, rgba(0,0,0,0.2) 0px 3px 1px -2px, rgba(0,0,0,0.12) 0px 1px 5px 0px;
+
+
+        h1
+          {
+            color: $color !important;
+            font-size: 80px;
+            overflow: hidden;
+            height: 20vh;
+            line-height: 20vh;
+            text-align: center;
+            font-family: $font;
+            // color: black;
+            margin: 0;
+          }
+        #go, #info
+          {
+            z-index: 100;
+          }
+        #go
+          {
+            border: 0;
+            padding: 20px 30px 20px 30px;
+            margin-left: 50px;
+            font-family: $font;
+            border-radius: 75px;
+            font-size: 20px;
+            cursor: pointer;
+            background: $main;
+            color: white;
+            text-align: center;
+
+            @extend .shadow;
+          }
+        #info
+          {
+            margin-right: 50px;
+            font-family: $font;
+            color: $color;
+          }
+      }
+  }
