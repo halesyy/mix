@@ -56,3 +56,10 @@ $h_height: 70px;
       }
 
   }
+
+  .content-row-top
+    {
+      height: calc(100vh - #{$h_height});
+
+      overflow: hidden;
+    }
